@@ -5,7 +5,7 @@ const { Routes } = require("discord-api-types/v9")
 const fs = require("fs")
 const { Player } = require("discord-player")
 
-dotenv.config()
+//dotenv.config()
 const TOKEN = process.env.TOKEN
 
 const LOAD_SLASH = process.argv[2] == "load"
@@ -68,7 +68,7 @@ else {
         }
         handleCommand()
     })
-    client.login(TOKEN)
+    client.login(process.env.TOKEN)
 }
 
 
